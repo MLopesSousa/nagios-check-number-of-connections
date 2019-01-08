@@ -6,8 +6,8 @@ import re
 
 def main():
         if len(sys.argv) == 3:
-                regex = "^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$"
-                ip = sys.argv[1]
+                regex = "^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:([0-9]){1,5})?$"
+                ip = sys.argv[1].strip()
                 min_connections_default = False
                 max_connections_default = False
 
@@ -52,7 +52,7 @@ def main():
                         print("The first argument must be an IP address: ")
                         sys.exit(2)
         else:
-                print("Sintax error: " + sys.argv[0] + " ${IP} ${MIN_THESHOLD}:${MAX_THESHOLD}")
+                print("Syntax error: " + sys.argv[0] + " ${IP} ${MIN_THESHOLD}:${MAX_THESHOLD}")
                 sys.exit(2)
 
 if __name__ == "__main__":
