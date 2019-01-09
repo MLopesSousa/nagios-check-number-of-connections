@@ -4,8 +4,7 @@ import commands
 import sys
 import re
 
-def main():
-		# 
+def main(): 
         regex = "^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:([0-9]){1,5})?$"
         ip = sys.argv[1].strip()
         min_connections_default = False
@@ -54,9 +53,6 @@ if __name__ == "__main__":
         if len(sys.argv) == 3:
                 main()
 				
-		elif len(sys.argv) == 2 and sys.stdin.readlines() != None:
-				main(sys.stdin)
-		
         else:
                 print("Sintax error: " + sys.argv[0] + " ${IP:PORT} ${MIN_THRESHOLD}:${MAX_THRESHOLD}")
                 sys.exit(2)
