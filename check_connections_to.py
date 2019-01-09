@@ -8,7 +8,6 @@ def main():
         regex = "^(?:[0-9]{1,3}\.){3}[0-9]{1,3}(:([0-9]){1,5})?$"
         ip = sys.argv[1].strip()
         min_connections_default = False
-        max_connections_default = False
 
         try:
                 if int(sys.argv[2].split(':')[0]) is not None:
@@ -21,7 +20,6 @@ def main():
                 if int(sys.argv[2].split(':')[1]) is not None:
                         max_connections = int(sys.argv[2].split(':')[1])
         except:
-                max_connections_default = True
                 max_connections = 65535
 
         if re.match(regex, ip):
