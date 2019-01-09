@@ -21,3 +21,5 @@ To ensure that connections to IP:  must exists, we can use the script like this.
 /usr/lib64/nagios/plugins/check_connections_to.py 10.10.10.1 :
 
 As any other Nagios plugin the script return code will be 0 to success and 2 in case of behavior unexpected.
+
+09/01/2019
