@@ -54,6 +54,10 @@ def main():
 if __name__ == "__main__":
         if len(sys.argv) == 3:
                 main()
+				
+		elif len(sys.argv) == 2 and sys.stdin.readlines() != None:
+				main(sys.stdin)
+		
         else:
                 print("Sintax error: " + sys.argv[0] + " ${IP:PORT} ${MIN_THRESHOLD}:${MAX_THRESHOLD}")
                 sys.exit(2)
